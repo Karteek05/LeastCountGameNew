@@ -1,0 +1,4 @@
+# Build output for the pure C# rules engine — never commit compiled artifacts.
+bin/
+obj/
+*.user

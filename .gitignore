@@ -1,0 +1,66 @@
+# ─────────────────────────────────────────────────────────────
+# Unity generated folders — never commit these. This is what let the
+# old repos balloon (a 331 MB Library/ was committed once).
+# ─────────────────────────────────────────────────────────────
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Asset meta data should only exist when the asset itself is tracked.
+!/**/[Aa]ssets/**/*.meta
+
+# Unity-generated IDE/project files. Anchored to the repo ROOT with a leading
+# slash so Unity's auto-generated LeastCountGameNew.sln / Assembly-CSharp.csproj
+# (which land at the root) are ignored WITHOUT touching the hand-authored .NET
+# project under core/.
+/*.csproj
+/*.unityproj
+/*.sln
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+.vs/
+.idea/
+# (core/LeastCount.sln and core/**/*.csproj are NOT matched by the root-anchored
+#  rules above, so they stay tracked. core/bin and core/obj are ignored by core/.gitignore.)
+
+# Gradle / Android build intermediates
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# ─────────────────────────────────────────────────────────────
+# SECRETS — must never be committed (see CLAUDE.md hard constraints).
+# A signing keystore and live Photon App IDs already leaked in the old repos.
+# ─────────────────────────────────────────────────────────────
+*.keystore
+*.jks
+*.p12
+*.pepk
+keystore.properties
+secrets*.json
+**/*.secret
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Crash reports
+sysinfo.txt
+crashlytics-build.properties
+
+# NOTE: the pure C# rules engine under core/ has its own core/.gitignore
+# for bin/ and obj/. The *.sln / *.csproj rules above intentionally do NOT
+# break it, because core/ is a normal .NET project you build directly.

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- netstandard2.0 so both Unity (Mono/IL2CPP) and the Azure server can consume this exact assembly. -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>LeastCount.Core</RootNamespace>
+    <AssemblyName>LeastCount.Core</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Doc comments are for the public rules API; don't fail on every enum member lacking one. -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <!-- Zero Unity dependencies by design. Do not add UnityEngine references here. -->
+  </PropertyGroup>
+
+</Project>
